@@ -11,6 +11,7 @@ VirtualBox 新建虚机
 ```
 
 调整CPU设置
+part2.md中 处理器数量：2 （大于1）是必须的，否则会失败
 ```
 选中虚拟机（新创建的）>> 控制 >> 设置 >> 系统 >> 处理器 
 处理器数量：2
@@ -67,6 +68,7 @@ sed -i "s/#UseDNS yes/UseDNS no/g" /etc/ssh/sshd_config
 ```
 
 设置静态IP地址
+part2.md中“设置静态IP地址”中的hip=30.0.2.11，4台服务器对应修改为（30.0.2.11,30.0.2.12,30.0.2.13,30.0.2.14）
 ```
 hip=30.0.2.11
 sed -i "s/BOOTPROTO=dhcp/BOOTPROTO=static/g" /etc/sysconfig/network-scripts/ifcfg-enp0s3
@@ -79,6 +81,8 @@ EOF
 
 ```
 修改主机名
+part2.md中“修改主机名”中的 hostnamectl set-hostname master1，
+4台服务器需要对应的修改为（master1,master2,master3,node1）
 ```
 hostnamectl set-hostname master1
 ```
