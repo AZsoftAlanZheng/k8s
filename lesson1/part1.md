@@ -38,6 +38,7 @@ VirtualBox 导入 Extension_Pack
 ```
 
 创建 VirtualBox NAT 网络
+part1.md中，“创建 VirtualBox NAT 网络”是必须的，用来让虚拟机可以互访并访问公网，同时也能通过“端口转发”来直连ssh
 ```
 管理 >> 全局设定 >> 网络 >> 添加新NAT网络 >> 编辑NAT网络（新添加的）
 
