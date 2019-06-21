@@ -1,3 +1,5 @@
+在master1 配置启动 Keepalived+HAProxy
+https://github.com/zhangjiongdev/k8s/blob/master/lesson1/part5.md
 配置keepalived
 ```
 mv /etc/keepalived/keepalived.conf /etc/keepalived/keepalived.conf.bak
