@@ -1,3 +1,5 @@
+第2、3台控制平面（master2、master3）安装配置加入 k8s ha 集群
+https://github.com/zhangjiongdev/k8s/blob/master/lesson1/part8.md
 下载需要的k8s docker images
 ```
 MY_REGISTRY=registry.cn-hangzhou.aliyuncs.com/openthings
@@ -96,6 +98,7 @@ systemctl enable kubelet && systemctl start kubelet && systemctl status kubelet
 ```
 
 加入集群
+部署完后，会显示类似以下的命令行，第一段命令是第2、3台master加入k8s集群用的，第二段是node节点加入k8s集群用的，两者的差异在于master多了一个--experimental-control-plane参数
 ```
 kubeadm join 30.0.2.10:6443 --token abcdef.0123456789abcdef \
     --discovery-token-ca-cert-hash sha256:ff15d25af6327e348312bf3fddbba2e1f8b20f0ba26ca5cafdb9e3e5789aead0 \
