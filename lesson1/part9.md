@@ -1,3 +1,5 @@
+数据平面(node1)安装配置加入 k8s ha 集群
+https://github.com/zhangjiongdev/k8s/blob/master/lesson1/part9.md
 关闭swap
 ```
 echo 'swapoff -a' >> /etc/profile
